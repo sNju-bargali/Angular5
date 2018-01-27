@@ -1,0 +1,19 @@
+Numbers
+
+var arr = [324,3,32,0,5,52,2100,1,20,2,3,3,2,0,2,2,1,1,1];
+//1. sorting / map
+var a = arr.sort();
+>>>[0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 20, 2100, 3, 3, 3, 32, 324, 5, 52]
+//2. reduce
+a.filter( function(v, i, a) { return !i || v !== a[i-1]; } );
+[0, 1, 2, 20, 2100, 3, 32, 324, 5, 52]
+
+
+/*
+* Strings
+*/
+var a = 'Magic belongs to Jerry Harry Jerry Harry Potter and Banana Joe'.split(' ');
+a = a.sort()
+>>>["Banana", "Harry", "Harry", "Jerry", "Jerry", "Joe", "Magic", "Potter", "and", "belongs", "to"]
+a.filter( function(v, i, a) { return !i || v !== a[i-1]; } );
+>>>["Banana", "Harry", "Jerry", "Joe", "Magic", "Potter", "and", "belongs", "to"]
